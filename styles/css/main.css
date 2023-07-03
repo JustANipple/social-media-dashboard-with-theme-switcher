@@ -66,6 +66,18 @@ p, h1, h2, h3, h4, h5, h6 {
 .dark-mode .followers .card .mid_wrapper .par {
   color: hsl(228, 12%, 44%);
 }
+.dark-mode .overview .title {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .overview .card {
+  background-color: hsl(228, 28%, 20%);
+}
+.dark-mode .overview .card .top_wrapper {
+  color: hsl(228, 12%, 44%);
+}
+.dark-mode .overview .card .bottom_wrapper .total_number {
+  color: hsl(0, 0%, 100%);
+}
 
 body {
   background-color: hsl(0, 0%, 100%);
@@ -179,6 +191,7 @@ input:checked + .slider:before {
 
 .followers {
   padding: 1.625rem;
+  padding-block-end: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -197,7 +210,7 @@ input:checked + .slider:before {
 }
 .followers .card {
   background-color: hsl(227, 47%, 96%);
-  padding-block: 2rem 1.5rem;
+  padding-block: 1.75rem 1.5rem;
   display: grid;
   row-gap: 1.25rem;
   justify-items: center;
@@ -233,7 +246,7 @@ input:checked + .slider:before {
   text-transform: uppercase;
   color: hsl(228, 12%, 44%);
   letter-spacing: 0.375rem;
-  font-size: 0.7777777778rem;
+  font-size: 0.7rem;
 }
 .followers .card .bottom_wrapper {
   display: flex;
@@ -248,5 +261,57 @@ input:checked + .slider:before {
   color: hsl(163, 72%, 41%);
 }
 .followers .card .bottom_wrapper .decreased {
+  color: hsl(356, 69%, 56%);
+}
+
+.overview {
+  padding: 1.625rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.overview .title {
+  color: hsl(228, 12%, 44%);
+  font-size: 1.53125rem;
+}
+.overview .card {
+  background-color: hsl(227, 47%, 96%);
+  display: grid;
+  row-gap: 1.5rem;
+  border-radius: 0.25rem;
+  padding: 1.5rem 1.5rem;
+}
+.overview .card .top_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.overview .card .top_wrapper .category {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: hsl(228, 12%, 44%);
+}
+.overview .card .bottom_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.overview .card .bottom_wrapper .total_number {
+  font-size: 1.96875rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.overview .card .bottom_wrapper .percentage {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.overview .card .bottom_wrapper .percentage .difference {
+  font-size: 0.7777777778rem;
+  font-weight: 700;
+}
+.overview .card .bottom_wrapper .increased {
+  color: hsl(163, 72%, 41%);
+}
+.overview .card .bottom_wrapper .decreased {
   color: hsl(356, 69%, 56%);
 }/*# sourceMappingURL=main.css.map */

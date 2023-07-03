@@ -55,4 +55,25 @@
             }
         }
     }
+
+    .overview {
+
+        .title {
+            color: v.$dark-text-num-clr;
+        }
+
+        .card {
+            background-color: v.$dark-card-bg-clr;
+
+            .top_wrapper {
+                color: v.$dark-text-clr;
+            }
+
+            .bottom_wrapper {
+                .total_number {
+                    color: v.$dark-text-num-clr;
+                }
+            }
+        }
+    }
 }

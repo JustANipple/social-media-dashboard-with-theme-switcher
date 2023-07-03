@@ -1,0 +1,65 @@
+@use "../abstracts/variables" as v;
+
+.overview {
+    padding: v.$mobile-body-padding;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .title {
+        color: v.$text-clr;
+        font-size: calc(v.$fs * 1.75);
+    }
+
+    .card {
+        background-color: v.$card-bg-clr;
+        display: grid;
+        row-gap: 1.5rem;
+        border-radius: .25rem;
+        padding: 1.5rem 1.5rem;
+
+        .top_wrapper {
+            display: flex;
+            justify-content: space-between;
+
+            .category {
+                font-size: v.$fs;
+                font-weight: v.$fw-bold;
+                color: v.$text-clr;
+            }
+
+            //.social_icon{}
+        }
+
+        .bottom_wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+
+            .total_number {
+                font-size: calc(v.$fs * 2.25);
+                font-weight: v.$fw-bold;
+                line-height: 1;
+            }
+
+            .percentage {
+                display: flex;
+                align-items: center;
+                gap: .25rem;
+
+                .difference {
+                    font-size: calc(v.$fs / 1.125);
+                    font-weight: v.$fw-bold;
+                }
+            }
+
+            .increased {
+                color: v.$lime-green;
+            }
+
+            .decreased {
+                color: v.$bright-red;
+            }
+        }
+    }
+}

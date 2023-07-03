@@ -2,6 +2,7 @@
 
 .followers {
     padding: v.$mobile-body-padding;
+    padding-block-end: 1rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -24,7 +25,7 @@
 
     .card {
         background-color: v.$card-bg-clr;
-        padding-block: 2rem 1.5rem;
+        padding-block: 1.75rem 1.5rem;
         display: grid;
         row-gap: 1.25rem;
         justify-items: center;
@@ -68,7 +69,7 @@
                 text-transform: uppercase;
                 color: v.$text-clr;
                 letter-spacing: .375rem;
-                font-size: calc(v.$fs / 1.125);
+                font-size: calc(v.$fs / 1.25);
             }
         }
 

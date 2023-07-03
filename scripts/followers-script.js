@@ -31,7 +31,7 @@ const followerCards = [
         todayNum: 144,
         status: "decreased" 
     }
-]
+];
 
 for(const card of followerCards) {
     let div = document.createElement("div");
