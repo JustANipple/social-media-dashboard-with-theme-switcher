@@ -10,7 +10,6 @@
     }
 
     .header {
-
         .wrapper {
             .title {
                 color: v.$dark-text-num-clr;
@@ -30,6 +29,30 @@
     
         .slider:before {
             background-color: v.$dark-main-bg-clr;
+        }
+    }
+
+    .followers {
+
+        .card {
+            background-color: v.$dark-card-bg-clr;
+
+            .top_wrapper {
+                .nickname {
+                    color: v.$dark-text-clr;
+                }
+            }
+
+            .mid_wrapper {
+
+                .total_number {
+                    color: v.$dark-text-num-clr;
+                }
+
+                .par {
+                    color: v.$dark-text-clr;
+                }
+            }
         }
     }
 }

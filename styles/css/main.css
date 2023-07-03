@@ -54,6 +54,18 @@ p, h1, h2, h3, h4, h5, h6 {
 .dark-mode .switch .slider:before {
   background-color: hsl(230, 17%, 14%);
 }
+.dark-mode .followers .card {
+  background-color: hsl(228, 28%, 20%);
+}
+.dark-mode .followers .card .top_wrapper .nickname {
+  color: hsl(228, 12%, 44%);
+}
+.dark-mode .followers .card .mid_wrapper .total_number {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .followers .card .mid_wrapper .par {
+  color: hsl(228, 12%, 44%);
+}
 
 body {
   background-color: hsl(0, 0%, 100%);
@@ -70,6 +82,20 @@ body::before {
   right: 0;
   z-index: -1;
   border-radius: 0 0 1rem 1rem;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
 }
 
 /* The switch - the box around the slider */
@@ -132,9 +158,10 @@ input:checked + .slider:before {
 
 .header {
   padding: 1.625rem;
+  padding-block-end: 0.8125rem;
   font-weight: 700;
   display: grid;
-  row-gap: 1rem;
+  row-gap: 1.25rem;
 }
 .header .par {
   color: hsl(228, 12%, 44%);
@@ -144,8 +171,82 @@ input:checked + .slider:before {
   color: hsl(230, 17%, 14%);
   margin-block-start: 0.5rem;
 }
-.header .dark-mode-wrapper {
+.header .dark_mode_wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.followers {
+  padding: 1.625rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.followers .facebook::before {
+  background-color: hsl(208, 92%, 53%);
+}
+.followers .twitter::before {
+  background-color: hsl(203, 89%, 53%);
+}
+.followers .instagram::before {
+  background: linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+.followers .youtube::before {
+  background-color: hsl(348, 97%, 39%);
+}
+.followers .card {
+  background-color: hsl(227, 47%, 96%);
+  padding-block: 2rem 1.5rem;
+  display: grid;
+  row-gap: 1.25rem;
+  justify-items: center;
+  text-align: center;
+  border-radius: 0.25rem;
+  position: relative;
+  overflow: hidden;
+}
+.followers .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+.followers .card .top_wrapper {
+  display: flex;
+  gap: 0.5rem;
+}
+.followers .card .top_wrapper .nickname {
+  font-size: 0.7777777778rem;
+  font-weight: 700;
+  color: hsl(228, 12%, 44%);
+}
+.followers .card .mid_wrapper .total_number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: hsl(230, 17%, 14%);
+  line-height: 1.25;
+}
+.followers .card .mid_wrapper .par {
+  text-transform: uppercase;
+  color: hsl(228, 12%, 44%);
+  letter-spacing: 0.375rem;
+  font-size: 0.7777777778rem;
+}
+.followers .card .bottom_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.followers .card .bottom_wrapper .difference {
+  font-weight: 700;
+  font-size: 0.7777777778rem;
+}
+.followers .card .bottom_wrapper .increased {
+  color: hsl(163, 72%, 41%);
+}
+.followers .card .bottom_wrapper .decreased {
+  color: hsl(356, 69%, 56%);
 }/*# sourceMappingURL=main.css.map */

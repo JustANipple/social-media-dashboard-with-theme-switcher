@@ -2,9 +2,10 @@
 
 .header {
     padding: v.$mobile-body-padding;
+    padding-block-end: calc(v.$mobile-body-padding / 2);
     font-weight: v.$fw-bold;
     display: grid;
-    row-gap: 1rem;
+    row-gap: 1.25rem;
 
     .par {
         color: v.$text-clr;
@@ -19,7 +20,7 @@
         }
     }
 
-    .dark-mode-wrapper {
+    .dark_mode_wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;

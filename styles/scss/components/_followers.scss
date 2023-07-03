@@ -1,0 +1,94 @@
+@use "../abstracts/variables" as v;
+
+.followers {
+    padding: v.$mobile-body-padding;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .facebook::before {
+        background-color: v.$facebook;
+    }
+
+    .twitter::before {
+        background-color: v.$twitter;
+    }
+
+    .instagram::before {
+        background: v.$instagram;
+    }
+
+    .youtube::before {
+        background-color: v.$youtube;
+    }
+
+    .card {
+        background-color: v.$card-bg-clr;
+        padding-block: 2rem 1.5rem;
+        display: grid;
+        row-gap: 1.25rem;
+        justify-items: center;
+        text-align: center;
+        border-radius: .25rem;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+        }
+
+        .top_wrapper {
+            display: flex;
+            gap: .5rem;
+
+            //.social_icon {}
+
+            .nickname {
+                font-size: calc(v.$fs / 1.125);
+                font-weight: v.$fw-bold;
+                color: v.$text-clr;
+            }
+        }
+
+        .mid_wrapper {
+
+            .total_number {
+                font-size: calc(v.$fs * 4);
+                font-weight: v.$fw-bold;
+                color: v.$text-num-clr;
+                line-height: 1.25;
+            }
+
+            .par {
+                text-transform: uppercase;
+                color: v.$text-clr;
+                letter-spacing: .375rem;
+                font-size: calc(v.$fs / 1.125);
+            }
+        }
+
+        .bottom_wrapper {
+            display: flex;
+            align-items: center;
+            gap: .25rem;
+
+            .difference {
+                font-weight: v.$fw-bold;
+                font-size: calc(v.$fs / 1.125);
+            }
+
+            .increased {
+                color: v.$lime-green;
+            }
+
+            .decreased {
+                color: v.$bright-red;
+            }
+        }
+    }
+}

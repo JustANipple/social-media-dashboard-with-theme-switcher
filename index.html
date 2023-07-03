@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="styles/css/main.css">
   <!-- Script -->
   <script src="scripts/script.js" defer></script>
+  <script src="scripts/followers-script.js" defer></script>
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +26,7 @@
       <p class="par">Total Followers: 23,004</p>
     </div>
     <hr>
-    <div class="dark-mode-wrapper">
+    <div class="dark_mode_wrapper">
       <p class="par">Dark Mode</p>
       <!-- Rounded switch -->
       <label class="switch">
@@ -36,11 +37,31 @@
   </header>
 
   <main>
-    <section class="followers"></section>
+    <section class="followers">
+      <h2 class="sr-only">Followers</h2>
+    </section>
 
-    <section class="overview"></section>
+    <section class="overview">
+      <h2 class="title">Overview - Today</h2>
+
+      <div class="card">
+        <div class="top_wrapper">
+          <p class="category">Page Views</p>
+          <img src="images/icon-facebook.svg" alt="social icon" class="social_icon">
+        </div>
+        <div class="bottom_wrapper">
+          <p class="total_number">87</p>
+          <div class="percentage">
+            <img src="images/icon-up.svg" alt="" aria-hidden="true">
+            <p class="difference"> <span class="number">3</span>% </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
   </main>
 
+  
   Social Media Dashboard
   Total Followers: 23,004
 
