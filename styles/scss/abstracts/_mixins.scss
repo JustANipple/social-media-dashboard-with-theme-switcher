@@ -1,21 +1,35 @@
 @use "../abstracts/variables" as v;
 
-@mixin light-mode() {
-    body {
-        background-color: v.$main-bg-clr;
-
-        &::before {
-            background-color: v.$top-bg-clr;
-        }
-    }
-}
-
 @mixin dark-mode() {
     body {
         background-color: v.$dark-main-bg-clr;
 
         &::before {
             background-color: v.$dark-top-bg-clr;
+        }
+    }
+
+    .header {
+
+        .wrapper {
+            .title {
+                color: v.$dark-text-num-clr;
+            }
+        }
+    
+        .par {
+            color: v.$dark-text-clr;
+        }
+    }
+
+
+    .switch {
+        input + .slider {
+            background: v.$dark-toggle;
+        }
+    
+        .slider:before {
+            background-color: v.$dark-main-bg-clr;
         }
     }
 }

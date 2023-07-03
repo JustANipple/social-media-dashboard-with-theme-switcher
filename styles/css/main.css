@@ -36,18 +36,34 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
-html body {
-  background-color: hsl(0, 0%, 100%);
+.dark-mode body {
+  background-color: hsl(230, 17%, 14%);
 }
-html body::before {
-  background-color: hsl(225, 100%, 98%);
+.dark-mode body::before {
+  background-color: hsl(232, 19%, 15%);
+}
+.dark-mode .header .wrapper .title {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .header .par {
+  color: hsl(228, 12%, 44%);
+}
+.dark-mode .switch input + .slider {
+  background: linear-gradient(0deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+.dark-mode .switch .slider:before {
+  background-color: hsl(230, 17%, 14%);
 }
 
 body {
+  background-color: hsl(0, 0%, 100%);
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
   position: relative;
 }
 body::before {
   content: "";
+  background-color: hsl(225, 100%, 98%);
   position: absolute;
   height: clamp(14.75rem, 14.5739rem + 0.7512vw, 15.25rem);
   left: 0;
@@ -79,37 +95,30 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  background: hsl(230, 22%, 74%);
 }
 
 .slider:before {
   position: absolute;
   content: "";
+  background-color: hsl(227, 47%, 96%);
   height: 1.125rem;
   width: 1.125rem;
   left: 4px;
+  right: 4px;
   top: 0;
   bottom: 0;
   margin-block: auto;
-  background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
 }
 
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  transform: translateX(23px);
 }
 
 /* Rounded sliders */
@@ -123,4 +132,20 @@ input:checked + .slider:before {
 
 .header {
   padding: 1.625rem;
+  font-weight: 700;
+  display: grid;
+  row-gap: 1rem;
+}
+.header .par {
+  color: hsl(228, 12%, 44%);
+}
+.header .wrapper .title {
+  font-size: 1.465625rem;
+  color: hsl(230, 17%, 14%);
+  margin-block-start: 0.5rem;
+}
+.header .dark-mode-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */

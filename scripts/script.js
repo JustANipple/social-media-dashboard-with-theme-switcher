@@ -1,4 +1,3 @@
-const checkbox = document.querySelector("input[type='checkbox']");
-
-
-checkbox.addEventListener("change", () => {});
+document.querySelector("input[type='checkbox']").addEventListener("change", () => {
+    document.documentElement.classList.toggle("dark-mode");
+});

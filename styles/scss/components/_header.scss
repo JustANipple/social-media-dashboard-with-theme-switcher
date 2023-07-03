@@ -2,4 +2,26 @@
 
 .header {
     padding: v.$mobile-body-padding;
+    font-weight: v.$fw-bold;
+    display: grid;
+    row-gap: 1rem;
+
+    .par {
+        color: v.$text-clr;
+    }
+
+    .wrapper {
+
+        .title {
+            font-size: calc(v.$fs * 1.675);
+            color: v.$text-num-clr;
+            margin-block-start: .5rem;
+        }
+    }
+
+    .dark-mode-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
