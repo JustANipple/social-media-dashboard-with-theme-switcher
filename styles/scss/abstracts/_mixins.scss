@@ -1,0 +1,21 @@
+@use "../abstracts/variables" as v;
+
+@mixin light-mode() {
+    body {
+        background-color: v.$main-bg-clr;
+
+        &::before {
+            background-color: v.$top-bg-clr;
+        }
+    }
+}
+
+@mixin dark-mode() {
+    body {
+        background-color: v.$dark-main-bg-clr;
+
+        &::before {
+            background-color: v.$dark-top-bg-clr;
+        }
+    }
+}

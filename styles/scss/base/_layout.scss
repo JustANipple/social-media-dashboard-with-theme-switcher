@@ -1,0 +1,20 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+html {
+    @include m.light-mode();
+}
+
+body {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        height: clamp(14.75rem, 14.5739rem + 0.7512vw, 15.25rem);
+        left: 0;
+        right: 0;
+        z-index: -1;
+        border-radius: 0 0 1rem 1rem;
+    }
+}
