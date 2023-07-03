@@ -93,3 +93,16 @@
         }
     }
 }
+
+@media screen and (min-width: 768px) {
+    .followers {
+        padding-inline: v.$desktop-body-padding;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
+
+        .card {
+            min-width: 16rem;
+        }
+    }
+}

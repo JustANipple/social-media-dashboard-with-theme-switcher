@@ -26,3 +26,27 @@
         align-items: center;
     }
 }
+
+@media screen and (min-width: 768px) {
+    .header {
+        padding-inline: v.$desktop-body-padding;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        hr {
+            display: none;
+        }
+
+        .wrapper {
+
+            .title {
+                font-size: calc(v.$fs * 2);
+            }
+        }
+
+        .dark_mode_wrapper {
+            gap: 1rem;
+        }
+    }
+}
