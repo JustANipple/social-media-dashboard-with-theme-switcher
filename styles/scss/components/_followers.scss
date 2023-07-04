@@ -33,6 +33,12 @@
         border-radius: .25rem;
         position: relative;
         overflow: hidden;
+        transition: all .125s ease-in-out;
+
+        &:hover {
+            filter: saturate(2) brightness(.95);
+            cursor: pointer;
+        }
 
         &::before {
             content: "";
@@ -97,12 +103,14 @@
 @media screen and (min-width: 768px) {
     .followers {
         padding-inline: v.$desktop-body-padding;
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 2rem;
+        display: grid;
+        column-gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
-        .card {
-            min-width: 16rem;
-        }
+@media screen and (min-width: 1440px) {
+    .followers {
+        grid-template-columns: repeat(4, 1fr);
     }
 }

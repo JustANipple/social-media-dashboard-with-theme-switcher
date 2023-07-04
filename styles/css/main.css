@@ -49,13 +49,16 @@ p, h1, h2, h3, h4, h5, h6 {
   color: hsl(228, 12%, 44%);
 }
 .dark-mode .switch input + .slider {
-  background: linear-gradient(0deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  background: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 }
-.dark-mode .switch .slider:before {
+.dark-mode .switch .slider::before {
   background-color: hsl(230, 17%, 14%);
 }
 .dark-mode .followers .card {
   background-color: hsl(228, 28%, 20%);
+}
+.dark-mode .followers .card:hover {
+  filter: saturate(1) brightness(1.4);
 }
 .dark-mode .followers .card .top_wrapper .nickname {
   color: hsl(228, 12%, 44%);
@@ -71,6 +74,9 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .dark-mode .overview .card {
   background-color: hsl(228, 28%, 20%);
+}
+.dark-mode .overview .card:hover {
+  filter: saturate(1) brightness(1.2);
 }
 .dark-mode .overview .card .top_wrapper {
   color: hsl(228, 12%, 44%);
@@ -136,6 +142,10 @@ body::before {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   background: hsl(230, 22%, 74%);
+}
+
+.slider:hover {
+  background: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 }
 
 .slider:before {
@@ -235,6 +245,11 @@ input:checked + .slider:before {
   border-radius: 0.25rem;
   position: relative;
   overflow: hidden;
+  transition: all 0.125s ease-in-out;
+}
+.followers .card:hover {
+  filter: saturate(2) brightness(0.95);
+  cursor: pointer;
 }
 .followers .card::before {
   content: "";
@@ -284,12 +299,14 @@ input:checked + .slider:before {
 @media screen and (min-width: 768px) {
   .followers {
     padding-inline: 10.25rem;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 2rem;
+    display: grid;
+    column-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
   }
-  .followers .card {
-    min-width: 16rem;
+}
+@media screen and (min-width: 1440px) {
+  .followers {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 .overview {
@@ -308,6 +325,11 @@ input:checked + .slider:before {
   row-gap: 1.5rem;
   border-radius: 0.25rem;
   padding: 1.5rem 1.5rem;
+  transition: all 0.125s ease-in-out;
+}
+.overview .card:hover {
+  filter: saturate(2) brightness(0.95);
+  cursor: pointer;
 }
 .overview .card .top_wrapper {
   display: flex;

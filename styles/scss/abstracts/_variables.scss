@@ -16,11 +16,14 @@ hsl(37, 97%, 70%), hsl(329, 70%, 58%));
 $youtube: hsl(348, 97%, 39%);
 
 //Dark Theme
-$dark-toggle: linear-gradient(0deg,
+$dark-toggle: linear-gradient(90deg,
 hsl(210, 78%, 56%), hsl(146, 68%, 55%)); 
 
 //Light Theme
 $toggle: hsl(230, 22%, 74%);
+
+//Hover background
+$hover: rgb(215, 220, 237);
 
 
 /* Neutral */

@@ -17,6 +17,12 @@
         row-gap: 1.5rem;
         border-radius: .25rem;
         padding: 1.5rem 1.5rem;
+        transition: all .125s ease-in-out;
+
+        &:hover {
+            filter: saturate(2) brightness(.95);
+            cursor: pointer;
+        }
 
         .top_wrapper {
             display: flex;

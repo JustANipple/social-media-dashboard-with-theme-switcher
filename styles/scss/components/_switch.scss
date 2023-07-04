@@ -27,6 +27,10 @@
     transition: .4s;
     background: v.$toggle;
   }
+
+  .slider:hover {
+    background: v.$dark-toggle;
+  }
   
   .slider:before {
     position: absolute;

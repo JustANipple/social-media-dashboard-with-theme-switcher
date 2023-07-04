@@ -21,13 +21,12 @@
         }
     }
 
-
     .switch {
         input + .slider {
             background: v.$dark-toggle;
         }
     
-        .slider:before {
+        .slider::before {
             background-color: v.$dark-main-bg-clr;
         }
     }
@@ -36,6 +35,10 @@
 
         .card {
             background-color: v.$dark-card-bg-clr;
+
+            &:hover {
+                filter: saturate(1) brightness(1.4);
+            }
 
             .top_wrapper {
                 .nickname {
@@ -64,6 +67,10 @@
 
         .card {
             background-color: v.$dark-card-bg-clr;
+
+            &:hover {
+                filter: saturate(1) brightness(1.2);
+            }
 
             .top_wrapper {
                 color: v.$dark-text-clr;
